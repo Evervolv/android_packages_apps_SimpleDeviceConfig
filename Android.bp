@@ -21,4 +21,15 @@ android_app {
     certificate: "platform",
     privileged: true,
     manifest: "AndroidManifest.xml",
+    required: [
+        "privapp_whitelist_org.protonaosp.deviceconfig",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_org.protonaosp.deviceconfig",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp_whitelist_org.protonaosp.deviceconfig.xml",
+    filename_from_src: true,
 }
